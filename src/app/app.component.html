@@ -7,6 +7,7 @@
       <tr>
         <th scope="col">Variable</th>
         <th scope="col">Pipe</th>
+        <th scope="col">description</th>
         <th scope="col">Product</th>
       </tr>
     </thead>
@@ -14,14 +15,37 @@
       <tr>
         <td>{{name}}</td>
         <td>uppercase</td>
+        <td>Turns the text to uppercase </td>
         <td>{{name | uppercase}}</td>
       </tr>
       <tr>
         <td>{{name}}</td>
         <td>lowercase</td>
+        <td>Turns the text to lowercase </td>
         <td>{{name | lowercase}}</td>
       </tr>
-      
+      <tr>
+        <td>{{name}}</td>
+        <td>slice:3</td>
+        <td>Slices the text in the part said ( in this case 3)</td>
+        <td>{{name | slice:3}}</td>
+      </tr>
+      <tr>
+        <td>{{name}}</td>
+        <td>slice:0:3</td>
+        <td>Slices the text in the part said ( in this from 0 to 3)</td>
+        <td>{{name | slice:0:3}}</td>
+      </tr>
+      <tr>
+        <td>{{array}}</td>
+        <td>slice:1:5</td>
+        <td>Also slices arrays ( in this from 1 to 5)</td>
+        <td>{{array | slice:1:5}}</td>
+      </tr>
     </tbody>
   </table>
+  <h4>Slice</h4>
+  <ul>
+    <li *ngFor="let item of array | slice:5:20">{{item}}</li>
+  </ul>
 </div>
