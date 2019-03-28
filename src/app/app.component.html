@@ -62,9 +62,33 @@
       </tr>
       <tr>
         <td>{{a}}</td>
+        <td>percent</td>
+        <td>To format percentages</td>
+        <td>{{a | percent}}</td>
+      </tr>
+      <tr>
+        <td>{{a}}</td>
         <td>percent:'2.2-2'</td>
         <td>To format percentages</td>
         <td>{{a | percent:'2.2-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{salary}}</td>
+        <td>currency</td>
+        <td>To format prices</td>
+        <td>{{salary | currency}}</td>
+      </tr>
+      <tr>
+        <td>{{salary}}</td>
+        <td>currency:'EUR'</td>
+        <td>formatting to euros</td>
+        <td>{{salary | currency:'EUR'}}</td>
+      </tr>
+      <tr>
+        <td>{{salary}}</td>
+        <td>currency:'EUR':'symbol-narrow':'4.0-0'</td>
+        <td>formatting to euros without decimals</td>
+        <td>{{salary | currency:'EUR':'symbol-narrow':'4.0-0'}}</td>
       </tr>
     </tbody>
   </table>
