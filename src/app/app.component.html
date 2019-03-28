@@ -96,4 +96,10 @@
   <ul>
     <li *ngFor="let item of array | slice:5:20">{{item}}</li>
   </ul>
+  <h4>JSON hero | json</h4>
+  {{hero | json}}
+  <h4> pre JSON hero | json pre </h4>
+  <pre>
+    {{hero | json}}
+  </pre>
 </div>

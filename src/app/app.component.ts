@@ -8,11 +8,21 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = 'Ramon';
 
-  array = [1,2,3,4,5,6,7,8,9,10];
+  array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   PI = Math.PI;
 
   a = 0.234;
 
   salary = 1234.5;
+
+  hero = {
+    name: 'Logan',
+    keyName: 'Wolverine',
+    age: 500,
+    address: {
+      street: "First",
+      number: 4,
+    }
+  }
 }
