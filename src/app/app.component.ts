@@ -28,4 +28,6 @@ export class AppComponent {
   promiseValue = new Promise ((resolve, reject)=>{
     setTimeout(()=>resolve('The data is here!'),3500);
   })
+
+  date = new Date();
 }
