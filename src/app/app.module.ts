@@ -9,13 +9,15 @@ import { LOCALE_ID } from '@angular/core';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { SecureDomPipe } from './pipes/secure-dom.pipe';
+import { PasswordPipe } from './pipes/password.pipe';
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
     AppComponent,
     CapitalizedPipe,
-    SecureDomPipe
+    SecureDomPipe,
+    PasswordPipe
   ],
   imports: [
     BrowserModule

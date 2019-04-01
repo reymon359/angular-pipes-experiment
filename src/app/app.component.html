@@ -126,6 +126,15 @@
         <td>Personallized pipe tu capitalize just the first one</td>
         <td>{{name2 |capitalized:false}}</td>
       </tr>
+      <tr>
+        <td> {{ name }} </td>
+        <td>
+          password:{{ activate }}
+          <br>
+          <button (click)="activate = !activate" type="button" class="btn btn-outline-primary">Activate/Deactivate</button>
+        </td>
+        <td> {{ name | password:activate }} </td>
+      </tr>
     </tbody>
   </table>
   <h4>Slice</h4>
