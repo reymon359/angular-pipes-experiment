@@ -31,4 +31,6 @@ export class AppComponent {
   })
 
   date = new Date();
+
+  video = 'phjJA4-UVIU';
 }
