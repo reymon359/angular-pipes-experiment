@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CapitalizedPipe } from "./pipes/capitalized.pipe";
 
 // dates in other language
 import { LOCALE_ID } from '@angular/core';
@@ -11,7 +12,8 @@ registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CapitalizedPipe
   ],
   imports: [
     BrowserModule
