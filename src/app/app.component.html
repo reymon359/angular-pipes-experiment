@@ -1,152 +1,154 @@
 <div class="container">
-  <br>
-  <h1>Pipes</h1>
-  <hr>
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">Variable</th>
-        <th scope="col">Pipe</th>
-        <th scope="col">description</th>
-        <th scope="col">Product</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{name}}</td>
-        <td>uppercase</td>
-        <td>Turns the text to uppercase </td>
-        <td>{{name | uppercase}}</td>
-      </tr>
-      <tr>
-        <td>{{name}}</td>
-        <td>lowercase</td>
-        <td>Turns the text to lowercase </td>
-        <td>{{name | lowercase}}</td>
-      </tr>
-      <tr>
-        <td>{{name}}</td>
-        <td>slice:3</td>
-        <td>Slices the text in the part said ( in this case 3)</td>
-        <td>{{name | slice:3}}</td>
-      </tr>
-      <tr>
-        <td>{{name}}</td>
-        <td>slice:0:3</td>
-        <td>Slices the text in the part said ( in this from 0 to 3)</td>
-        <td>{{name | slice:0:3}}</td>
-      </tr>
-      <tr>
-        <td>{{array}}</td>
-        <td>slice:1:5</td>
-        <td>Also slices arrays ( in this from 1 to 5)</td>
-        <td>{{array | slice:1:5}}</td>
-      </tr>
-      <tr>
-        <td>{{PI}}</td>
-        <td>number</td>
-        <td>Modifies numbers</td>
-        <td>{{PI | number}}</td>
-      </tr>
-      <tr>
-        <td>{{PI}}</td>
-        <td>number:'3.0-0'</td>
-        <td>Modifies numbers</td>
-        <td>{{PI | number:'3.0-0'}}</td>
-      </tr>
-      <tr>
-        <td>{{PI}}</td>
-        <td>number:'1.0-2'</td>
-        <td>Modifies numbers</td>
-        <td>{{PI | number:'1.0-2'}}</td>
-      </tr>
-      <tr>
-        <td>{{a}}</td>
-        <td>percent</td>
-        <td>To format percentages</td>
-        <td>{{a | percent}}</td>
-      </tr>
-      <tr>
-        <td>{{a}}</td>
-        <td>percent:'2.2-2'</td>
-        <td>To format percentages</td>
-        <td>{{a | percent:'2.2-2'}}</td>
-      </tr>
-      <tr>
-        <td>{{salary}}</td>
-        <td>currency</td>
-        <td>To format prices</td>
-        <td>{{salary | currency}}</td>
-      </tr>
-      <tr>
-        <td>{{salary}}</td>
-        <td>currency:'EUR'</td>
-        <td>formatting to euros</td>
-        <td>{{salary | currency:'EUR'}}</td>
-      </tr>
-      <tr>
-        <td>{{salary}}</td>
-        <td>currency:'EUR':'symbol-narrow':'4.0-0'</td>
-        <td>formatting to euros without decimals</td>
-        <td>{{salary | currency:'EUR':'symbol-narrow':'4.0-0'}}</td>
-      </tr>
-      <tr>
-        <td>{{promiseValue}}</td>
-        <td>async</td>
-        <td>to format value that come from promise or async</td>
-        <td>{{promiseValue |async}}</td>
-      </tr>
-      <tr>
-        <td>{{date}}</td>
-        <td>date</td>
-        <td>to format date values</td>
-        <td>{{date |date}}</td>
-      </tr>
-      <tr>
-        <td>{{date}}</td>
-        <td>date:'medium'</td>
-        <td>to format date values</td>
-        <td>{{date |date:'medium'}}</td>
-      </tr>
-      <tr>
-        <td>{{date}}</td>
-        <td>date:'MMMM - dd'</td>
-        <td>to format date values</td>
-        <td>{{date |date:'MMMM - dd'}}</td>
-      </tr>
-      <tr>
-        <td>{{name2}}</td>
-        <td>capitalized</td>
-        <td>Personallized pipe tu capitalize</td>
-        <td>{{name2 |capitalized }}</td>
-      </tr>
-      <tr>
-        <td>{{name2}}</td>
-        <td>capitalized:false</td>
-        <td>Personallized pipe tu capitalize just the first one</td>
-        <td>{{name2 |capitalized:false}}</td>
-      </tr>
-      <tr>
-        <td> {{ name }} </td>
-        <td>
-          password:{{ activate }}
-          <br>
-          <button (click)="activate = !activate" type="button" class="btn btn-outline-primary">Activate/Deactivate</button>
-        </td>
-        <td> {{ name | password:activate }} </td>
-      </tr>
-    </tbody>
-  </table>
-  <h4>Slice</h4>
-  <ul>
-    <li *ngFor="let item of array | slice:5:20">{{item}}</li>
-  </ul>
-  <h4>JSON hero | json</h4>
-  {{hero | json}}
-  <h4> pre JSON hero | json pre </h4>
-  <pre>
+    <br>
+    <h1>Pipes</h1>
+    <p>A table with some common and useful Angular Pipes. There are even custom ones </p>
+    <hr>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Pipe</th>
+                <th scope="col">description</th>
+                <th scope="col">Product</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{name}}</td>
+                <td>uppercase</td>
+                <td>Turns the text to uppercase </td>
+                <td>{{name | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>{{name}}</td>
+                <td>lowercase</td>
+                <td>Turns the text to lowercase </td>
+                <td>{{name | lowercase}}</td>
+            </tr>
+            <tr>
+                <td>{{name}}</td>
+                <td>slice:3</td>
+                <td>Slices the text in the part said ( in this case 3)</td>
+                <td>{{name | slice:3}}</td>
+            </tr>
+            <tr>
+                <td>{{name}}</td>
+                <td>slice:0:3</td>
+                <td>Slices the text in the part said ( in this from 0 to 3)</td>
+                <td>{{name | slice:0:3}}</td>
+            </tr>
+            <tr>
+                <td>{{array}}</td>
+                <td>slice:1:5</td>
+                <td>Also slices arrays ( in this from 1 to 5)</td>
+                <td>{{array | slice:1:5}}</td>
+            </tr>
+            <tr>
+                <td>{{PI}}</td>
+                <td>number</td>
+                <td>Modifies numbers</td>
+                <td>{{PI | number}}</td>
+            </tr>
+            <tr>
+                <td>{{PI}}</td>
+                <td>number:'3.0-0'</td>
+                <td>Modifies numbers</td>
+                <td>{{PI | number:'3.0-0'}}</td>
+            </tr>
+            <tr>
+                <td>{{PI}}</td>
+                <td>number:'1.0-2'</td>
+                <td>Modifies numbers</td>
+                <td>{{PI | number:'1.0-2'}}</td>
+            </tr>
+            <tr>
+                <td>{{a}}</td>
+                <td>percent</td>
+                <td>To format percentages</td>
+                <td>{{a | percent}}</td>
+            </tr>
+            <tr>
+                <td>{{a}}</td>
+                <td>percent:'2.2-2'</td>
+                <td>To format percentages</td>
+                <td>{{a | percent:'2.2-2'}}</td>
+            </tr>
+            <tr>
+                <td>{{salary}}</td>
+                <td>currency</td>
+                <td>To format prices</td>
+                <td>{{salary | currency}}</td>
+            </tr>
+            <tr>
+                <td>{{salary}}</td>
+                <td>currency:'EUR'</td>
+                <td>formatting to euros</td>
+                <td>{{salary | currency:'EUR'}}</td>
+            </tr>
+            <tr>
+                <td>{{salary}}</td>
+                <td>currency:'EUR':'symbol-narrow':'4.0-0'</td>
+                <td>formatting to euros without decimals</td>
+                <td>{{salary | currency:'EUR':'symbol-narrow':'4.0-0'}}</td>
+            </tr>
+            <tr>
+                <td>{{promiseValue}}</td>
+                <td>async</td>
+                <td>to format value that come from promise or async</td>
+                <td>{{promiseValue |async}}</td>
+            </tr>
+            <tr>
+                <td>{{date}}</td>
+                <td>date</td>
+                <td>to format date values</td>
+                <td>{{date |date}}</td>
+            </tr>
+            <tr>
+                <td>{{date}}</td>
+                <td>date:'medium'</td>
+                <td>to format date values</td>
+                <td>{{date |date:'medium'}}</td>
+            </tr>
+            <tr>
+                <td>{{date}}</td>
+                <td>date:'MMMM - dd'</td>
+                <td>to format date values</td>
+                <td>{{date |date:'MMMM - dd'}}</td>
+            </tr>
+            <tr>
+                <td>{{name2}}</td>
+                <td>capitalized</td>
+                <td>Personallized pipe tu capitalize</td>
+                <td>{{name2 |capitalized }}</td>
+            </tr>
+            <tr>
+                <td>{{name2}}</td>
+                <td>capitalized:false</td>
+                <td>Personallized pipe tu capitalize just the first one</td>
+                <td>{{name2 |capitalized:false}}</td>
+            </tr>
+            <tr>
+                <td> {{ name }} </td>
+                <td>
+                    password:{{ activate }}
+                    <br>
+                    <button (click)="activate = !activate" type="button" class="btn btn-outline-primary">Activate/Deactivate</button>
+                </td>
+                <td> {{ name | password:activate }} </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Slice</h4>
+    <ul>
+        <li *ngFor="let item of array | slice:5:20">{{item}}</li>
+    </ul>
+    <h4>JSON hero | json</h4>
+    {{hero | json}}
+    <h4> pre JSON hero | json pre </h4>
+    <pre>
     {{hero | json}}
   </pre>
-  <h4>secureDom pipe</h4>
-  <iframe width="560" height="315" [src]="video | secureDom:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h4>secureDom pipe</h4>
+    <p>Custom pipe with Dom sanitizer</p>
+    <iframe width="560" height="315" [src]="video | secureDom:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
